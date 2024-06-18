@@ -1,0 +1,25 @@
+/*******************************************************
+  Main Import File
+      - Base Imports (Varialbes/Utilities/Base styles)
+      - Components (Navigation/Tools/Modules)
+      - Vendor Imports (Third party plugins)
+****************************************************** */
+
+
+/* ================================================================
+  Base Imports
+================================================================ */
+@import "variables";
+@import "globals/utilities";
+@import "globals/normalize";
+@import "globals/fonts";
+
+/* ================================================================
+  Component Imports
+================================================================ */
+@import "components/layout";
+
+/* ================================================================
+  Vendor Imports
+================================================================ */
+@import "vendor/aos";

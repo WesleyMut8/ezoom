@@ -1,0 +1,64 @@
+/* ================================================================
+  Breakpoint mixin
+================================================================ */
+
+@mixin breakpoint($point) {
+  @if $point == retina {
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @content; }
+  }
+  // 16px baseline (256px) s = small
+  @else if $point == s {
+    @media (min-width: $bp-s) { @content; }
+  } 
+  // 16px baseline (580px) sw = small-wide
+  @else if $point == sw {
+    @media (min-width: $bp-sw) { @content; }
+  } 
+  // 16px baseline (580px - 767px) sw-m = small-wide TO medium
+  @else if $point == sw-m {
+    @media (min-width:$bp-sw) and (max-width:$bp-m)  { @content; }
+  } 
+  // 16px baseline (256px - 767px) s-m = small TO medium
+  @else if $point == s-m {
+    @media (min-width:$bp-s) and (max-width:$bp-m)  { @content; }
+  }
+  // 16px baseline (256px - 959px) s-l = small TO large
+  @else if $point == s-l {
+    @media (min-width:$bp-s) and (max-width:$bp-l)  { @content; }
+  }
+  @else if $point == s-xl {
+    @media (min-width:$bp-s) and (max-width:$bp-xl)  { @content; }
+  }
+  // 16px baseline (768px) m = medium
+  @else if $point == m {
+    @media (min-width: $bp-m) { @content; }
+  }
+  // 16px baseline (768px - 959px) m-l = medium TO large
+  @else if $point == m-l {
+    @media (min-width:$bp-m) and (max-width:$bp-l)  { @content; }
+  }
+  // 16px baseline (768px - 1024px) m-lg = medium TO large
+  @else if $point == m-lg {
+    @media (min-width:$bp-m) and (max-width:$bp-lg)  { @content; }
+  }
+  // 16px baseline (768px - 1152) m-l = medium TO xlarge
+  @else if $point == m-xl {
+    @media (min-width:$bp-m) and (max-width:$bp-xl)  { @content; }
+  }
+  // 16px baseline (960px) l = large
+  @else if $point == l {
+    @media (min-width: $bp-l) { @content; }
+  }
+  // 16px baseline (1024px) lg = large 
+  @else if $point == lg {
+    @media (min-width: $bp-lg) { @content; }
+  }
+  // 16px baseline (1152px) lx = extra large
+  @else if $point == xl {
+    @media (min-width: $bp-xl) { @content; }
+  }
+
+  @else {
+    @media (min-width: $point) { @content; }
+  }
+}
