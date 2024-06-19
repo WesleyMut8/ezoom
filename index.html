@@ -6,16 +6,66 @@
   <title>Ezoom</title>
 
   <!-- Style sheet link -->
-  <link href="assets/scss/main.scss" rel="stylesheet" media="all" />
+  <link href="assets/scss/main.css" rel="stylesheet" media="all" />
   <link href="assets/scss/globals/_fonts.scss" rel="stylesheet"/>
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/ezoom-icon.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/ezoom-icon.png" />
 
 </head>
 <body>
+  <div id="background">
+    <!-- tornar video em gif para otimizar reprodução no site -->
+
+    <!-- <video autoplay muted loop>
+      <source src="assets/videos/background-video.mp4" type="video/mp4">
+      Seu navegador não é compatível com tags de vídeo.
+    </video> -->
+    <img src="assets/images/background.png" >
+  </div>
   <!-- HEADER -->
   <header id="site-header" role="banner">
-    
+    <div id="header-container">
+      <div class="logo">
+        <a href="/"><img src="assets/images/ezoom-logo.svg" alt="EZOOM" role="img"></a>
+      </div>
+
+      <div class="toggle-menu">
+        <button type="button" role="button" aria-label="Toggle Navigatiom" class="menu-hamburger">
+          <span class="lines"></span>
+        </button>
+      </div>
+
+      <div class="navigation">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="/MENU1">MENU1</a></li>
+            <li><a href="/MENU1">MENU2</a></li>
+            <li><a href="/MENU1">MENU3</a></li>
+          </ul>
+        </nav>
+
+        <div class="search"><img src="assets/images/magnifier.svg" alt=""></div>
+
+        <div class="external-links">
+          <nav class="main-nav">
+            <ul>
+              <li>
+                <a href="facebook.com" target="_blank"><img src="assets/images/icons/facebook.svg" alt="Acessar facebook"></a></li>
+              <li>
+                <a href="instagram.com" target="_blank"><img src="assets/images/icons/instagram.svg" alt="Acessar instagram"></a></li>
+              <li>
+                <a href="youtube.com" target="_blank"><img src="assets/images/icons/youtube.svg" alt="Acessar youtube"></a></li>
+              <li>
+                <a href="tiktok.com" target="_blank"><img src="assets/images/icons/tiktok.svg" alt="Acessar tiktok"></a></li>
+              <li>
+                <a href="https://podcasters.spotify.com/" target="_blank"><img src="assets/images/icons/podcast.svg" alt="Acessar podcast"></a></li>
+              <li>
+                <a href="linkedin.com" target="_blank"><img src="assets/images/icons/linkedin.svg" alt="Acessar linkedin"></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
   </header>
 
   <!-- MAIN CONTENT -->
