@@ -22,50 +22,64 @@
     </video> -->
     <img src="assets/images/background.png" >
   </div>
+
   <!-- HEADER -->
-  <header id="site-header" role="banner">
-    <div id="header-container">
-      <div class="logo">
-        <a href="/"><img src="assets/images/ezoom-logo.svg" alt="EZOOM" role="img"></a>
+  <header id="header">
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <a href="/">
+          <img src="assets/images/ezoom-logo.svg" alt="EZOOM" role="img">
+        </a>
       </div>
 
-      <div class="toggle-menu">
-        <button type="button" role="button" aria-label="Toggle Navigation" class="menu-hamburger">
-          <span class="lines"></span>
-          <span class="lines"></span>
-          <span class="lines"></span>
+      <div class="header-search mobile">
+        <img src="assets/images/magnifier.svg" alt="EZOOM" role="img">
+      </div>
+
+      <div class="header-navigation" id="header-navigation">
+        <button onclick="toggleSidebar()" class="header-button-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+        </svg>
         </button>
-      </div>
 
-      <div class="navigation">
-        <nav class="main-nav">
-          <ul>
-            <li><a href="/MENU1">MENU1</a></li>
-            <li><a href="/MENU2">MENU2</a></li>
-            <li><a href="/MENU3">MENU3</a></li>
-          </ul>
-        </nav>
+        <div class="menu">
+          <div class="menu-links">
+            <a href="/MENU1">MENU1</a>
+            <a href="/MENU1">MENU2</a>
+            <a href="/MENU1">MENU3</a>
+          </div>
 
-        <div class="search"><img src="assets/images/magnifier.svg" alt=""></div>
+        <div class="header-search desktop">
+          <img src="assets/images/magnifier.svg" alt="Pesquisar" role="img">
+        </div>
 
-        <div class="external-links">
-          <nav class="main-nav">
-            <ul>
-              <li><a href="https://facebook.com" target="_blank"><img src="assets/images/icons/facebook.svg" alt="Acessar facebook"></a></li>
-              <li><a href="https://instagram.com" target="_blank"><img src="assets/images/icons/instagram.svg" alt="Acessar instagram"></a></li>
-              <li><a href="https://youtube.com" target="_blank"><img src="assets/images/icons/youtube.svg" alt="Acessar youtube"></a></li>
-              <li><a href="https://tiktok.com" target="_blank"><img src="assets/images/icons/tiktok.svg" alt="Acessar tiktok"></a></li>
-              <li><a href="https://podcasters.spotify.com/" target="_blank"><img src="assets/images/icons/podcast.svg" alt="Acessar podcast"></a></li>
-              <li><a href="https://linkedin.com" target="_blank"><img src="assets/images/icons/linkedin.svg" alt="Acessar linkedin"></a></li>
-            </ul>
-          </nav>
+          <div class="menu-socials">  
+            <a href="facebook.com" target="_blank"><img src="assets/images/icons/facebook.svg" alt="Acessar facebook"></a>
+          
+            <a href="instagram.com" target="_blank"><img src="assets/images/icons/instagram.svg" alt="Acessar instagram"></a>
+          
+            <a href="youtube.com" target="_blank"><img src="assets/images/icons/youtube.svg" alt="Acessar youtube"></a>
+          
+            <a href="tiktok.com" target="_blank"><img src="assets/images/icons/tiktok.svg" alt="Acessar tiktok"></a>
+          
+            <a href="https://podcasters.spotify.com/" target="_blank"><img src="assets/images/icons/podcast.svg" alt="Acessar podcast"></a>
+          
+            <a href="linkedin.com" target="_blank"><img src="assets/images/icons/linkedin.svg" alt="Acessar linkedin"></a>
+          </div>
         </div>
       </div>
+
+      <button onclick="toggleSidebar()" class="header-button-open">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+      </button>
     </div>
   </header>
 
   <!-- MAIN CONTENT -->
-   <main id="site-main" role="main">
+   <main id="main-content" role="main">
 
    </main>
 

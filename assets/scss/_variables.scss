@@ -3,9 +3,9 @@
 ================================================================ */
 
 // Color Variables
-$white: #FFFFFF;
-$black: #000000;
-$grayscale0: #F7F7F7; // backgrounds
+$--color-white: #FFFFFF;
+$--color-black: #000000;
+$--color-grayscale0: #121212 ; // backgrounds
 
 // Category colors
 $sports-green: #42B073;
@@ -33,5 +33,6 @@ $bp-m-max: 59.938rem; // 959px
 $bp-mw: 60rem; // 960px
 $bp-mw-max: 71.188rem; // 1139px 
 $bp-l: 71.25rem; // 1140px
+$bp-lg: 64rem;
 $bp-l-max: 81.188rem; // 1299px 
 $bp-xl: 81.25rem; // 1300px  

@@ -26,6 +26,9 @@
   @else if $point == s-l {
     @media (min-width:$bp-s) and (max-width:$bp-l)  { @content; }
   }
+  @else if $point == n-lg {
+    @media (max-width:$bp-lg)  { @content; }
+  }
   @else if $point == s-xl {
     @media (min-width:$bp-s) and (max-width:$bp-xl)  { @content; }
   }

@@ -525,7 +525,7 @@ template {
 
 
 /* Hidden
-   ========================================================================== */
+========================================================================== */
 
 
 /**
@@ -534,4 +534,24 @@ template {
 
 [hidden] {
   display: none;
+}
+
+
+/* Personal normalize
+========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $--color-white;
+  font-weight: $fontWeight-normal;
+  font-family: $font-family-barlow;
+
+  @media (min-width: $bp-m) {
+    line-height: 20px;
+    font-weight: $fontWeight-normal;
+  }
 }
