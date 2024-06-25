@@ -1,5 +1,4 @@
 // Script for header navigation
-
 var header           = document.getElementById('header');
 var headerNavigation = document.getElementById('header-navigation');
 var content          = document.getElementById('main-content');
@@ -40,5 +39,3 @@ window.addEventListener('resize', function(event) {
         toggleSidebar();
     }
 });
-
-// Script for carousel

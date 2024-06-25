@@ -2,6 +2,13 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
+
+  @media (max-width: 1024px) {
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
 }
 
 .carousel-card {
@@ -14,6 +21,10 @@
   border-radius: 0 0 1rem 1rem;
   overflow: hidden; 
   transition: .7s;
+
+  @media (max-width: 1024px) {
+    min-width: 100%;
+  }
 }
 
 .carousel-card::before {
@@ -23,10 +34,9 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url("../images/Rectangle8.png");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center !important;
   transition: 0.7s ease-out;
   z-index: -1; 
 }
@@ -59,7 +69,7 @@
   to {
     // left: 2rem;
     right: auto;
-    color: $sports-green;
+    color: var(--move-button-color);
     transform: translateX(2rem);
   }
 }
@@ -67,7 +77,7 @@
 .color-label {
   position: absolute;
   top: 0;
-  background-color: $sports-green;
+  background-color: transparent;
   height: .4rem;
   border-radius: 0 0 .2rem .2rem;
   width: 100%;
@@ -97,4 +107,36 @@
   bottom: 1.6rem;
   color: $--color-white;
   transition: left 0.5s ease, color 0.5s ease;
+}
+
+.slider-controls {
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    cursor: pointer;
+    width: 3rem;
+    height: .75rem;
+    // padding: .2rem 0;
+    border: 1px solid $--color-grayscale0;
+    margin: 0 0.25rem;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #fff;
+  }
+
+  input[type="radio"]:checked + label {
+    background-color: $sports-green;
+    // color: #fff;
+    border: 1px solid $sports-green;
+  }
 }
