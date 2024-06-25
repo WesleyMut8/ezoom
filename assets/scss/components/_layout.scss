@@ -5,7 +5,7 @@
 #background {
   position: fixed; 
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   overflow: hidden;
   z-index: -1;
 
@@ -13,6 +13,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover; 
+  }
+
+  @include breakpoint(lg) {
+    height: 100vh;
   }
 }
 
@@ -43,6 +47,70 @@ header {
 main {
   z-index: 0;
 }
+
+.main-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: 45vh;
+  padding: 0 2rem;
+  justify-content: space-between;
+
+  .banner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+    h1 {
+      font-weight: 300;
+      strong {
+        font-weight: 600;
+      }
+    }
+  
+    span {
+      font-weight: 300;
+    }
+  }
+
+  .banner-links {
+    display: flex;
+    justify-content: space-between;
+
+    .external-link {
+      display: flex;
+      align-items: center;
+      padding: .4rem .8rem;
+      border: 1px solid $--color-white;
+      border-radius: 1rem;
+    }
+
+    .whatsapp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 2rem;
+      background-color: $sports-green;
+    }
+  }
+
+  @include breakpoint(lg) {
+    padding: 4rem;
+    justify-content: baseline;
+
+    h1 {
+      font-size: 4rem;
+      line-height: 3.5rem;
+    }
+    span {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
 
 /* ================================================================
   Footer

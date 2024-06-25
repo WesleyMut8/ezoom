@@ -73,10 +73,11 @@ header {
     background-color: $--color-grayscale0;
     gap: 4rem;
     height: 100%;
-    width: 45vw;
+    width: 90vw;
     padding: 4rem 2rem 2rem;
     animation-duration: 1s;
-    margin-left: -100vw;    
+    margin-left: -100vw;
+    z-index: 99;
   }
 
   background-color: rgba(218, 112, 214, 0.185);
@@ -151,10 +152,10 @@ header {
 
   @keyframes showSidebar {
     from {margin-left: -100vw;}
-    to {margin-left: -5vw;}
+    to {margin-left: -10vw;}
   }
   @keyframes closeSidebar {
-    from {margin-left: -5vw;}
+    from {margin-left: -10vw;}
     to {margin-left: -100vw;}
   }
 }
