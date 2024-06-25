@@ -1,0 +1,100 @@
+.carousel-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.carousel-card {
+  position: relative;
+  display: flex;
+  height: 280px;
+  width: 100%;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 0 0 1rem 1rem;
+  overflow: hidden; 
+  transition: .7s;
+}
+
+.carousel-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/Rectangle8.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.7s ease-out;
+  z-index: -1; 
+}
+
+.carousel-card:hover::before {
+  filter: blur(1px) brightness(50%);
+}
+
+.carousel-card:hover {
+  .card-texts {
+    bottom: 5rem;
+    
+    .title {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.carousel-card:hover .card-button {
+  animation: moveButton .7s forwards;
+}
+
+@keyframes moveButton {
+  from {
+    left: auto;
+    right: 2rem;
+    color: $--color-white;
+    transform: translateX(0);
+  }
+  to {
+    // left: 2rem;
+    right: auto;
+    color: $sports-green;
+    transform: translateX(2rem);
+  }
+}
+
+.color-label {
+  position: absolute;
+  top: 0;
+  background-color: $sports-green;
+  height: .4rem;
+  border-radius: 0 0 .2rem .2rem;
+  width: 100%;
+}
+
+.card-texts {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  transition: .5s;
+
+  .title {
+    font-weight: 500;
+    transition: .5s;
+  }
+  .date {
+    font-weight: 300;
+  }
+}
+
+.card-button {
+  position: absolute;
+  right: 2rem;
+  bottom: 1.6rem;
+  color: $--color-white;
+  transition: left 0.5s ease, color 0.5s ease;
+}

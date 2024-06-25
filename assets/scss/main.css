@@ -503,7 +503,8 @@ a {
   Header
 ================================================================ */
 #background {
-  position: fixed;
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 70vh;
   overflow: hidden;
@@ -547,10 +548,11 @@ main {
 
 .main-banner {
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   gap: 2rem;
-  height: 45vh;
-  padding: 0 2rem;
+  height: calc(70vh - 149px);
+  padding: 2rem;
   justify-content: space-between;
 }
 .main-banner .banner-text {
@@ -591,6 +593,7 @@ main {
   .main-banner {
     padding: 4rem;
     justify-content: baseline;
+    height: calc(100vh - 153px);
   }
   .main-banner h1 {
     font-size: 4rem;
@@ -670,9 +673,6 @@ header {
   right: 6rem;
 }
 
-.header-navigation {
-  background-color: rgba(218, 112, 214, 0.185);
-}
 @media (max-width: 64rem) {
   .header-navigation {
     position: absolute;
@@ -776,4 +776,99 @@ header {
   to {
     margin-left: -100vw;
   }
+}
+
+.carousel-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.carousel-card {
+  position: relative;
+  display: flex;
+  height: 280px;
+  width: 100%;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 0 0 1rem 1rem;
+  overflow: hidden;
+  transition: 0.7s;
+}
+
+.carousel-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/Rectangle8.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.7s ease-out;
+  z-index: -1;
+}
+
+.carousel-card:hover::before {
+  filter: blur(1px) brightness(50%);
+}
+
+.carousel-card:hover .card-texts {
+  bottom: 5rem;
+}
+.carousel-card:hover .card-texts .title {
+  font-size: 1.1rem;
+}
+
+.carousel-card:hover .card-button {
+  animation: moveButton 0.7s forwards;
+}
+
+@keyframes moveButton {
+  from {
+    left: auto;
+    right: 2rem;
+    color: #FFFFFF;
+    transform: translateX(0);
+  }
+  to {
+    right: auto;
+    color: #42B073;
+    transform: translateX(2rem);
+  }
+}
+.color-label {
+  position: absolute;
+  top: 0;
+  background-color: #42B073;
+  height: 0.4rem;
+  border-radius: 0 0 0.2rem 0.2rem;
+  width: 100%;
+}
+
+.card-texts {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  transition: 0.5s;
+}
+.card-texts .title {
+  font-weight: 500;
+  transition: 0.5s;
+}
+.card-texts .date {
+  font-weight: 300;
+}
+
+.card-button {
+  position: absolute;
+  right: 2rem;
+  bottom: 1.6rem;
+  color: #FFFFFF;
+  transition: left 0.5s ease, color 0.5s ease;
 }/*# sourceMappingURL=main.css.map */
