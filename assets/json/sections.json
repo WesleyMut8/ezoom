@@ -1,0 +1,68 @@
+[
+  {
+    "title": "ESPORTES",
+    "subtitle": "lorem ipsum dolor sit amet lorem",
+    "color": "#42B073",
+    "cards": [
+      {
+        "title": "TITLE DO CARD1",
+        "content": "10/01/2024",
+        "background": "assets/images/Rectangle8.png"
+      },
+      {
+        "title": "d DO CARD2",
+        "content": "10/02/2024",
+        "background": "assets/images/Rectangle8.png"
+      },
+      {
+        "title": "c DO CARD2",
+        "content": "10/02/2024",
+        "background": "assets/images/Rectangle8.png"
+      }
+    ]
+  },
+  {
+    "title": "EVENTOS",
+    "subtitle": "lorem ipsum dolor sit amet lorem",
+    "color": "#9B836B",
+    "cards": [
+      {
+        "title": "TITLE DO CARD1",
+        "content": "10/01/2024",
+        "background": "assets/images/Rectangle8.png"
+      },
+      {
+        "title": "d DO CARD2",
+        "content": "10/02/2024",
+        "background": "assets/images/Rectangle8.png"
+      },
+      {
+        "title": "c DO CARD2",
+        "content": "10/02/2024",
+        "background": "assets/images/Rectangle8.png"
+      }
+    ]
+  },
+  {
+    "title": "SERVIÇOS",
+    "subtitle": "lorem ipsum dolor sit amet lorem",
+    "color": "#24BEFF",
+    "cards": [
+      {
+        "title": "TITLE DO CARD1",
+        "content": "10/01/2024",
+        "background": "assets/images/Rectangle8.png"
+      },
+      {
+        "title": "d DO CARD2",
+        "content": "10/02/2024",
+        "background": "assets/images/Rectangle8.png"
+      },
+      {
+        "title": "c DO CARD2",
+        "content": "10/02/2024",
+        "background": "assets/images/Rectangle8.png"
+      }
+    ]
+  }
+]

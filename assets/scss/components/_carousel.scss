@@ -9,134 +9,136 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
   }
-}
 
-.carousel-card {
-  position: relative;
-  display: flex;
-  height: 280px;
-  width: 100%;
-  flex-direction: column;
-  box-sizing: border-box;
-  border-radius: 0 0 1rem 1rem;
-  overflow: hidden; 
-  transition: .7s;
-
-  @media (max-width: 1024px) {
-    min-width: 100%;
-  }
-}
-
-.carousel-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center !important;
-  transition: 0.7s ease-out;
-  z-index: -1; 
-}
-
-.carousel-card:hover::before {
-  filter: blur(1px) brightness(50%);
-}
-
-.carousel-card:hover {
-  .card-texts {
-    bottom: 5rem;
-    
-    .title {
-      font-size: 1.1rem;
+  .carousel-card {
+    position: relative;
+    display: flex;
+    height: 280px;
+    width: 100%;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 0 0 1rem 1rem;
+    overflow: hidden; 
+    transition: .7s;
+  
+    @media (max-width: 1024px) {
+      min-width: 100%;
     }
   }
-}
-
-.carousel-card:hover .card-button {
-  animation: moveButton .7s forwards;
-}
-
-@keyframes moveButton {
-  from {
-    left: auto;
-    right: 2rem;
-    color: $--color-white;
-    transform: translateX(0);
+  
+  .carousel-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center !important;
+    transition: 0.7s ease-out;
+    z-index: -1; 
   }
-  to {
-    // left: 2rem;
-    right: auto;
-    color: var(--move-button-color);
-    transform: translateX(2rem);
+  
+  .carousel-card:hover::before {
+    filter: blur(1px) brightness(50%);
   }
-}
-
-.color-label {
-  position: absolute;
-  top: 0;
-  background-color: transparent;
-  height: .4rem;
-  border-radius: 0 0 .2rem .2rem;
-  width: 100%;
-}
-
-.card-texts {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  flex-direction: column;
-  padding: 2rem;
-  gap: 2rem;
-  transition: .5s;
-
-  .title {
-    font-weight: 500;
-    transition: .5s;
-  }
-  .date {
-    font-weight: 300;
-  }
-}
-
-.card-button {
-  position: absolute;
-  right: 2rem;
-  bottom: 1.6rem;
-  color: $--color-white;
-  transition: left 0.5s ease, color 0.5s ease;
-}
-
-.slider-controls {
-  display: none;
-
-  @media (max-width: 1024px) {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0;
-
-  }
-
-  input[type="radio"] {
-    display: none;
-  }
-
-  label {
+  
+  .carousel-card:hover {
     cursor: pointer;
-    width: 3rem;
-    height: .75rem;
-    // padding: .2rem 0;
-    border: 1px solid $--color-grayscale0;
-    margin: 0 0.25rem;
-    border-radius: 10px 10px 10px 10px;
-    background-color: #fff;
+    
+    .card-texts {
+      bottom: 5rem;
+      
+      .title {
+        font-size: 1.1rem;
+      }
+    }
   }
-
-  input[type="radio"]:checked + label {
-    background-color: $sports-green;
-    // color: #fff;
-    border: 1px solid $sports-green;
+  
+  .carousel-card:hover .card-button {
+    animation: moveButton .7s forwards;
+  }
+  
+  @keyframes moveButton {
+    from {
+      left: auto;
+      right: 2rem;
+      color: $--color-white;
+      transform: translateX(0);
+    }
+    to {
+      // left: 2rem;
+      right: auto;
+      color: var(--move-button-color);
+      transform: translateX(2rem);
+    }
+  }
+  
+  .color-label {
+    position: absolute;
+    top: 0;
+    background-color: transparent;
+    height: .4rem;
+    border-radius: 0 0 .2rem .2rem;
+    width: 100%;
+  }
+  
+  .card-texts {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    transition: .5s;
+  
+    .title {
+      font-weight: 500;
+      transition: .5s;
+    }
+    .date {
+      font-weight: 300;
+    }
+  }
+  
+  .card-button {
+    position: absolute;
+    right: 2rem;
+    bottom: 1.6rem;
+    color: $--color-white;
+    transition: left 0.5s ease, color 0.5s ease;
+  }
+  
+  .slider-controls {
+    display: none;
+  
+    @media (max-width: 1024px) {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0;
+  
+    }
+  
+    input[type="radio"] {
+      display: none;
+    }
+  
+    label {
+      cursor: pointer;
+      width: 3rem;
+      height: .75rem;
+      // padding: .2rem 0;
+      border: 1px solid $--color-grayscale0;
+      margin: 0 0.25rem;
+      border-radius: 10px 10px 10px 10px;
+      background-color: #fff;
+    }
+  
+    input[type="radio"]:checked + label {
+      background-color: $sports-green;
+      // color: #fff;
+      border: 1px solid $sports-green;
+    }
   }
 }
