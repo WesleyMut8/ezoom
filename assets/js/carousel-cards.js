@@ -1,36 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const jsonData = [
-    { 
-      title: "a DO CARD1",
-      date: "10/01/2024",
-      color: "#9B836B",
-      background: "../assets/images/Rectangle8.png"
-    },
-    { 
-      title: "d DO CARD2",
-      date: "10/02/2024",
-      color: "#24BEFF", 
-      background: "../assets/images/Rectangle8.png"
-    },
-    {
-      title: "c DO CARD2",
-      date: "10/02/2024",
-      color: "#24BEFF", 
-      background: "../assets/images/Rectangle8.png"
-    },
-    { 
-      title: "TITULO DO s",
-      date: "10/02/2024",
-      color: "#24BEFF", 
-      background: "../assets/images/Rectangle8.png"
-    },
-    { 
-      title: "TITULO DO a",
-      date: "10/03/2024",
-      color: "#FF632D",
-      background: "../assets/images/Rectangle8.png"
-    }
-  ];
+  fetch('assets/json/carousel.json')
+    .then(response => response.json())
+    .then(data => generateCards(data))
+    .catch(error => console.error('Error loading the JSON:', error));
 
   function generateCards(data) {
     const container = document.getElementById('carousel-container');
@@ -83,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.appendChild(cardTexts);
       card.appendChild(cardButton);
 
-      card.style.backgroundImage = `url(${item.background})`;
+      card.style.backgroundImage = `url(${item.imgUrl})`;
       card.style.backgroundPosition = 'center';
       card.style.backgroundSize = 'cover';
 
