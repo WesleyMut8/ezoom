@@ -3,21 +3,25 @@
     "title": "ESPORTES",
     "subtitle": "lorem ipsum dolor sit amet lorem",
     "color": "#42B073",
+    "allNews": "https://www.365scores.com/pt-br/news/magazine/",
     "cards": [
       {
-        "title": "TITLE DO CARD1",
-        "content": "10/01/2024",
-        "background": "assets/images/Rectangle8.png"
+        "title": "António Oliveira desabafa sobre reforços: “Não vai chegar aqui o Neymar”",
+        "date": "26 de Junho 2024",
+        "url": "https://www.365scores.com/pt-br/news/magazine/antonio-oliveira-desabafa-sobre-reforcos-nao-vai-chegar-aqui-o-neymar/",
+        "imgUrl": "https://www.365scores.com/pt-br/news/magazine/wp-content/uploads/2024/06/AGIF24062620320862-780x470.jpg.webp"
       },
       {
-        "title": "d DO CARD2",
-        "content": "10/02/2024",
-        "background": "assets/images/Rectangle8.png"
+        "title": "Hulk é decisivo em retorno, e Atlético-MG quebra série sem vitórias",
+        "date": "26 de Junho 2024",
+        "url": "https://www.365scores.com/pt-br/news/magazine/hulk-e-decisivo-em-retorno-e-atletico-mg-quebra-serie-sem-vitorias/",
+        "imgUrl": "https://www.365scores.com/pt-br/news/magazine/wp-content/uploads/2024/06/53818850090_bbdf14ec29_o-780x470.jpg.webp"
       },
       {
-        "title": "c DO CARD2",
-        "content": "10/02/2024",
-        "background": "assets/images/Rectangle8.png"
+        "title": "John tranquiliza botafoguenses sobre lesão na costela: “Eu estou bem”",
+        "date": "26 de Junho 2024",
+        "url": "https://www.365scores.com/pt-br/news/magazine/john-tranquiliza-botafoguenses-sobre-lesao-na-costela-eu-estou-bem/",
+        "imgUrl": "https://www.365scores.com/pt-br/news/magazine/wp-content/uploads/2024/06/image-274-780x470.png.webp"
       }
     ]
   },
@@ -25,21 +29,25 @@
     "title": "EVENTOS",
     "subtitle": "lorem ipsum dolor sit amet lorem",
     "color": "#9B836B",
+    "allNews": "https://www.cnnbrasil.com.br/tudo-sobre/eventos/",
     "cards": [
       {
-        "title": "TITLE DO CARD1",
-        "content": "10/01/2024",
-        "background": "assets/images/Rectangle8.png"
+        "title": "Aviação executiva aquece com perspectiva de crescimento de mais de 100% nos próximos 5 anos",
+        "date": "26 de Junho 2024",
+        "url": "https://www.cnnbrasil.com.br/economia/negocios/aviacao-executiva-aquece-com-perspectiva-de-crescimento-de-mais-de-100-nos-proximos-5-anos/",
+        "imgUrl": "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/06/WhatsApp-Image-2024-06-14-at-16.13.48.jpeg?w=1220&h=674&crop=1"
       },
       {
-        "title": "d DO CARD2",
-        "content": "10/02/2024",
-        "background": "assets/images/Rectangle8.png"
+        "title": "Prefeitura de São Paulo vai monitorar celulares de pessoas em grandes eventos",
+        "date": "26 de Junho 2024",
+        "url": "https://www.cnnbrasil.com.br/nacional/prefeitura-de-sao-paulo-vai-monitorar-celulares-de-pessoas-em-grandes-eventos/",
+        "imgUrl": "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/06/parada-vista-de-cima.jpg?w=1220&h=674&crop=1"
       },
       {
-        "title": "c DO CARD2",
-        "content": "10/02/2024",
-        "background": "assets/images/Rectangle8.png"
+        "title": "Ministério estuda promover show com artistas nacionais no RJ para arrecadar recursos ao RS",
+        "date": "26 de Junho 2024",
+        "url": "https://www.cnnbrasil.com.br/economia/macroeconomia/ministerio-estuda-promover-show-com-artistas-nacionais-no-rj-para-arrecadar-recursos-ao-rs/",
+        "imgUrl": "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/05/ENQ20240503027.jpg?w=1220&h=674&crop=1"
       }
     ]
   },
@@ -47,21 +55,77 @@
     "title": "SERVIÇOS",
     "subtitle": "lorem ipsum dolor sit amet lorem",
     "color": "#24BEFF",
+    "allNews": "https://www.cnnbrasil.com.br/tudo-sobre/servicos/",
     "cards": [
       {
-        "title": "TITLE DO CARD1",
-        "content": "10/01/2024",
-        "background": "assets/images/Rectangle8.png"
+        "title": "Volume de serviços no Brasil cresce mais que o esperado em abril com impulso de transportes",
+        "date": "26 de Junho 2024",
+        "url": "https://www.cnnbrasil.com.br/economia/macroeconomia/setor-de-servicos-do-brasil-cresce-05-em-abril-acima-das-expectativas/",
+        "imgUrl": "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2021/06/1365_EFC67927F3A0D110-11.jpg?w=1220&h=674&crop=1"
       },
       {
-        "title": "d DO CARD2",
-        "content": "10/02/2024",
-        "background": "assets/images/Rectangle8.png"
+        "title": "Setor de serviços dos EUA se recupera em maio, segundo ISM",
+        "date": "10/02/2024",
+        "url": "https://www.cnnbrasil.com.br/economia/macroeconomia/setor-de-servicos-dos-eua-se-recupera-em-maio-segundo-ism/",
+        "imgUrl": "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2021/06/36600_7D26521203AB3776.jpg?w=1220&h=674&crop=1"
       },
       {
-        "title": "c DO CARD2",
-        "content": "10/02/2024",
-        "background": "assets/images/Rectangle8.png"
+        "title": "Setor de serviços do Brasil tem maior expansão em quase 2 anos com demanda melhor, aponta PMI",
+        "date": "10/02/2024",
+        "url": "https://www.cnnbrasil.com.br/economia/macroeconomia/setor-de-servicos-do-brasil-tem-maior-expansao-em-quase-2-anos-com-demanda-melhor-aponta-pmi/",
+        "imgUrl": "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2022/05/pexels-clem-onojeghuo-375889.jpg?w=1220&h=674&crop=1"
+      }
+    ]
+  },
+  {
+    "title": "PROJETOS",
+    "subtitle": "lorem ipsum dolor sit amet lorem",
+    "color": "#FF632D",
+    "allNews": "https://vocesa.abril.com.br/noticias-sobre/projetos",
+    "cards": [
+      {
+        "title": "A transformação de uma empresa vem de todos os lados",
+        "date": "29 de Maio 2024",
+        "url": "https://vocesa.abril.com.br/geral/a-transformacao-de-uma-empresa-vem-de-todos-os-lados/",
+        "imgUrl": "https://vocesa.abril.com.br/wp-content/uploads/2021/12/Imagem-8-2.jpg?quality=70&strip=info&w=1280&h=720&crop=1"
+      },
+      {
+        "title": "A inclusão é a sustentação para os projetos de diversidade",
+        "date": "30 de Julho 2021",
+        "url": "https://vocesa.abril.com.br/coluna/cris-kerr/a-inclusao-e-a-sustentacao-para-os-projetos-de-diversidade/",
+        "imgUrl": "https://vocesa.abril.com.br/wp-content/uploads/2021/07/vcsa-diversidade_destaque.png?w=907&h=698&crop=1"
+      },
+      {
+        "title": "Ao planejar a carreira, considere o “plano B”",
+        "date": "13 de Maio 2020",
+        "url": "https://vocesa.abril.com.br/coluna/renato-bernhoeft/ao-planejar-sua-carreira-considere-o-plano-b/",
+        "imgUrl": "https://vocesa.abril.com.br/wp-content/uploads/2020/05/plano-b.jpg?quality=70&strip=info&w=640&h=426&crop=1"
+      }
+    ]
+  },
+  {
+    "title": "NEGÓCIOS",
+    "subtitle": "lorem ipsum dolor sit amet lorem",
+    "color": "#FFD400",
+    "allNews": "https://www.infomoney.com.br/negocios/",
+    "cards": [
+      {
+        "title": "XP vai patrocinar João Fonseca, uma das maiores promessas do tênis nacional",
+        "date": "21 de Julho 2024",
+        "url": "https://www.infomoney.com.br/business/xp-vai-patrocinar-joao-fonseca-uma-das-maiores-promessas-do-tenis-nacional/",
+        "imgUrl": "https://www.infomoney.com.br/wp-content/uploads/2024/06/TPF_9577_9fde15.jpg?quality=70&strip=all"
+      },
+      {
+        "title": "Hiperideal: a saga da rede baiana de supermercados que virou multinacional",
+        "date": "15 de Julho 2024",
+        "url": "https://www.infomoney.com.br/business/hiperideal-a-saga-da-rede-baiana-de-supermercados-que-virou-multinacional/",
+        "imgUrl": "https://www.infomoney.com.br/wp-content/uploads/2024/06/amanda-vasconcelos-hiperideal.jpg?quality=70&strip=all"
+      },
+      {
+        "title": "XP fecha parceria com a B&T, corretora de câmbio que movimenta R$ 7 bi por ano”",
+        "date": "11 de Julho 2024",
+        "url": "https://www.infomoney.com.br/negocios/xp-fecha-parceria-com-a-bt-corretora-de-cambio-que-movimenta-r-7-bi-por-ano/",
+        "imgUrl": "https://www.infomoney.com.br/wp-content/uploads/2023/12/Bruno-Ballista_XP.jpg?w=1400&quality=70&strip=all"
       }
     ]
   }

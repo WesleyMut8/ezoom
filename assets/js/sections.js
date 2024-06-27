@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function generateSections(sections) {
         const sectionsContainer = document.querySelector('.sections-container');
-        let isGray = true; 
+        let isGray = true;
 
-        sections.forEach(section => {
+        sections.forEach((section, sectionIndex) => {
             const sectionBox = document.createElement('div');
             sectionBox.className = 'section-box';
             sectionBox.style.borderLeft = `.5rem solid ${section.color}`;
-            sectionBox.style.backgroundColor = isGray ? '#f2f2f2' : '#ffffff'; 
-            isGray = !isGray; 
+            sectionBox.style.backgroundColor = isGray ? '#f2f2f2' : '#ffffff';
+            isGray = !isGray;
 
             const boxText = document.createElement('div');
             boxText.className = 'box-text';
@@ -27,9 +27,10 @@ document.addEventListener("DOMContentLoaded", function() {
             subtitle.textContent = section.subtitle;
 
             const externalLink = document.createElement('a');
-            externalLink.href = '#';
+            externalLink.href = section.allNews;
             externalLink.className = 'external-link';
             externalLink.textContent = 'VER TODOS';
+            externalLink.target = '_blank';
 
             boxText.appendChild(title);
             boxText.appendChild(subtitle);
@@ -37,25 +38,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const boxCards = document.createElement('div');
             boxCards.className = 'box-cards';
+            const sliderContainer = document.createElement('div');
+            sliderContainer.className = 'carousel-container';
+            boxCards.appendChild(sliderContainer);
 
-            // Gerar cards dentro da seção
-            section.cards.forEach(card => {
-                const cardElement = document.createElement('div');
+            const controlsContainer = document.createElement('div');
+            controlsContainer.classList.add('slider-controls');
+
+            section.cards.forEach((card, cardIndex) => {
+                const cardElement = document.createElement('a');
                 cardElement.className = 'card';
+                cardElement.href = card.url;
+                cardElement.target = '_blank';
 
                 const cardImage = document.createElement('div');
                 cardImage.className = 'image';
                 const img = document.createElement('img');
-                img.src = card.background;
+                img.src = card.imgUrl;
                 img.alt = 'imagem';
                 cardImage.appendChild(img);
 
                 const colorLabel = document.createElement('div');
-                colorLabel.className = 'color-label';
-                colorLabel.style.backgroundColor = section.color; 
+                colorLabel.className = 'color-label-section';
+                colorLabel.style.backgroundColor = section.color;
 
                 const cardTexts = document.createElement('div');
-                cardTexts.className = 'card-texts';
+                cardTexts.className = 'card-texts-section';
 
                 const cardTitle = document.createElement('h1');
                 cardTitle.className = 'title';
@@ -63,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 const cardContent = document.createElement('span');
                 cardContent.className = 'content';
-                cardContent.textContent = card.content;
+                cardContent.textContent = card.date;
 
                 cardTexts.appendChild(cardTitle);
                 cardTexts.appendChild(cardContent);
@@ -81,21 +89,72 @@ document.addEventListener("DOMContentLoaded", function() {
                 cardElement.appendChild(cardTexts);
                 cardElement.appendChild(cardButton);
 
-                // Adiciona a cor de background ao card
+                 // Adiciona a cor de background ao card
                 cardElement.addEventListener('mouseover', () => {
                     cardTexts.style.backgroundColor = section.color;
                 });
                 cardElement.addEventListener('mouseout', () => {
                     cardTexts.style.backgroundColor = '';
                 });
+                
+                sliderContainer.appendChild(cardElement);
 
-                boxCards.appendChild(cardElement);
+                // Gerar os inputs do tipo radio e labels para o slider
+                const radioInput = document.createElement('input');
+                radioInput.type = 'radio';
+                radioInput.name = `slider-${sectionIndex}`;
+                radioInput.id = `slide${sectionIndex}-${cardIndex + 1}`;
+                if (cardIndex === 0) radioInput.checked = true;
+
+                const label = document.createElement('label');
+                label.htmlFor = `slide${sectionIndex}-${cardIndex + 1}`;
+
+                if (!radioInput.checked) {
+                    label.classList.add('not-checked');
+                } else {
+                    label.classList.add('checked');
+                    label.style.backgroundColor = section.color;
+                    label.style.borderColor = section.color;
+                }
+
+                controlsContainer.appendChild(radioInput);
+                controlsContainer.appendChild(label);
+
+                // Adiciona evento para mudar as classes dinamicamente
+                radioInput.addEventListener('change', () => {
+                    controlsContainer.querySelectorAll('label').forEach(lbl => {
+                        lbl.classList.remove('checked');
+                        lbl.classList.add('not-checked');
+                        lbl.style.backgroundColor = '#FFFFFF';
+                        lbl.style.borderColor = '#121212';
+                    });
+                    label.classList.add('checked');
+                    label.classList.remove('not-checked');
+                    label.style.backgroundColor = section.color;
+                    label.style.borderColor = section.color;
+                });
             });
 
             sectionBox.appendChild(boxText);
             sectionBox.appendChild(boxCards);
+            sectionBox.appendChild(controlsContainer);
 
             sectionsContainer.appendChild(sectionBox);
+
+            // Função para atualizar a posição do slide
+            function updateSlider() {
+                const slides = sliderContainer.querySelectorAll('.card');
+                const radios = controlsContainer.querySelectorAll(`input[name="slider-${sectionIndex}"]`);
+                radios.forEach((radio, index) => {
+                    radio.addEventListener('change', () => {
+                        slides.forEach((slide) => {
+                            slide.style.transform = `translateX(-${index * 100}%)`;
+                        });
+                    });
+                });
+            }
+
+            updateSlider();
         });
     }
 });
