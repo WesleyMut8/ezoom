@@ -10,14 +10,14 @@ function toggleSidebar()
     showSidebar = !showSidebar;
     if(showSidebar)
     {
-        headerNavigation.style.marginLeft = '-10vw';
+        headerNavigation.style.left = '0vw';
         headerNavigation.style.animationName = 'showSidebar';
         content.style.filter = 'blur(2px)';
         background.style.filter = 'blur(2px)';
     }
     else
     {
-        headerNavigation.style.marginLeft = '-100vw';
+        headerNavigation.style.left = '-100vw';
         headerNavigation.style.animationName = 'closeSidebar';
         content.style.filter = '';
     }
