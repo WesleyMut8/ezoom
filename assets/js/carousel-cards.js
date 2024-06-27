@@ -105,9 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
       controlsContainer.appendChild(label);
     });
 
-    // Adicionar os controles ao documento
     const mainContent = document.getElementById('main-content');
-    mainContent.insertBefore(controlsContainer, mainContent.children[2]); // Inserir após #carousel-container
+    mainContent.insertBefore(controlsContainer, mainContent.children[2]); 
   }
 
   generateCards(jsonData);
